@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuestLingo - Thế Giới Trò Chơi Tiếng Anh</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Thêm thư viện icon FontAwesome để làm đẹp giao diện -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <header class="navbar">
+        <div class="logo"><i class="fa-solid fa-gamepad"></i> QuestLingo</div>
+        <nav>
+            <a href="#" class="nav-link active">Trang chủ</a>
+            <a href="#game-hub" class="nav-link">Kho Trò Chơi</a>
+            <a href="#leaderboard" class="nav-link">Bảng Xếp Hạng</a>
+        </nav>
+        <div class="user-stats">
+            <span>🔥 <strong id="streak-count">3</strong> Ngày</span>
+            <span>⭐ <strong id="total-stars">120</strong> Sao</span>
+        </div>
+    </header>
+
+    <!-- Banner Chào Mừng -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Học Tiếng Anh Qua Thử Thách Cực Vui</h1>
+            <p>Khám phá kho trò chơi sinh động, tích lũy điểm thưởng và chinh phục từ vựng mỗi ngày cùng hàng ngàn người chơi khác!</p>
+            <a href="#game-hub" class="cta-btn"><i class="fa-solid fa-play"></i> Khám phá ngay</a>
+        </div>
+    </section>
+
+    <!-- Kho Trò Chơi (Game Hub) -->
+    <section id="game-hub" class="game-hub-section">
+        <h2>Chọn Trò Chơi Của Bạn</h2>
+        <div class="game-cards-grid">
+            <div class="game-card" onclick="startMiniGame(1)">
+                <div class="card-icon" style="background: #ff7675;"><i class="fa-solid fa-apple-whole"></i></div>
+                <h3>Thử Thách Từ Vựng</h3>
+                <p>Chọn nghĩa đúng dựa vào hình ảnh minh họa sinh động.</p>
+                <button class="play-card-btn">Chơi ngay</button>
+            </div>
+            <div class="game-card" onclick="startMiniGame(2)">
+                <div class="card-icon" style="background: #ffeaa7;"><i class="fa-solid fa-puzzle-piece"></i></div>
+                <h3>Lật Thẻ Trí Nhớ</h3>
+                <p>Ghép cặp từ tiếng Anh và hình ảnh tương ứng.</p>
+                <button class="play-card-btn">Sắp ra mắt</button>
+            </div>
+            <div class="game-card" onclick="startMiniGame(3)">
+                <div class="card-icon" style="background: #55efc4;"><i class="fa-solid fa-headphones"></i></div>
+                <h3>Thử Thách Nghe Hiểu</h3>
+                <p>Nghe phát âm và chọn đáp án chính xác nhất.</p>
+                <button class="play-card-btn">Sắp ra mắt</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Khu Vực Chơi Game Chính (Ẩn/Hiện linh hoạt) -->
+    <section id="active-game-section" class="game-wrapper" style="display: none;">
+        <div class="game-container">
+            <button id="back-to-hub" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Quay lại kho game</button>
+            <div id="game-box">
+                <div class="game-header-info">
+                    <span id="level-badge">Cấp độ 1</span>
+                    <span id="score-display"><i class="fa-solid fa-star"></i> Điểm: 0</span>
+                </div>
+                
+                <!-- Khung hình ảnh minh họa trực quan trong game -->
+                <div class="game-image-box">
+                    <img id="quiz-image" src="" alt="Minh họa từ vựng">
+                </div>
+
+                <h3 id="question-text">Câu hỏi sẽ hiện ở đây</h3>
+                
+                <div class="options-container">
+                    <button class="option-btn" data-id="0">Đáp án 1</button>
+                    <button class="option-btn" data-id="1">Đáp án 2</button>
+                    <button class="option-btn" data-id="2">Đáp án 3</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chân trang -->
+    <footer>
+        <p>&copy; 2026 QuestLingo. Học mà chơi - Chơi mà học!</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
